@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Barrio Café, tu café de barrio favorito.">
+  <title>Barrio Café | Café de barrio</title>
+
+ 
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fcf8f2;
+    color: #30251f;
+    line-height: 1.7;
+  }
+
+  header {
+    background: #30251f;
+    color: white;
+    padding: 18px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  header h2 {
+    margin: 0;
+  }
+
+  nav {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    color: #e5bb8e;
+  }
+
+  .principal {
+    padding: 85px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #f0dfcc, #e6c6a4);
+  }
+
+  .principal h1 {
+    font-size: clamp(34px, 5vw, 56px);
+    line-height: 1.15;
+    margin: 0 auto 18px;
+    max-width: 700px;
+  }
+
+  .principal p {
+    font-size: 18px;
+    max-width: 550px;
+    margin: 0 auto 18px;
+  }
+
+  .boton {
+    display: inline-block;
+    background: #75472f;
+    color: white;
+    text-decoration: none;
+    padding: 13px 24px;
+    border-radius: 8px;
+    margin-top: 12px;
+    font-weight: bold;
+    transition: background 0.2s;
+  }
+
+  .boton:hover {
+    background: #4c3023;
+  }
+
+  section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 24px;
+  }
+
+  section h2 {
+    font-size: 30px;
+    margin-top: 0;
+  }
+
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit, minmax(200px, 1fr)
+    );
+    gap: 22px;
+  }
+
+  .producto {
+    background: white;
+    border: 1px solid #eee3d7;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 5px 18px #30251f0c;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .producto:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px #30251f18;
+  }
+
+  .producto h3 {
+    margin-top: 0;
+  }
+
+  .precio {
+    font-size: 20px;
+    font-weight: bold;
+    color: #75472f;
+  }
+
+  #contacto {
+    text-align: center;
+    background: #f0e5d8;
+    max-width: none;
+  }
+
+  footer {
+    background: #30251f;
+    color: white;
+    text-align: center;
+    padding: 22px;
+  }
+
+  @media (max-width: 600px) {
+    header {
+      justify-content: center;
+      text-align: center;
+    }
+
+    nav {
+      justify-content: center;
+    }
+
+    .principal {
+      padding: 60px 20px;
+    }
+
+    section {
+      padding: 35px 20px;
+    }
+  }
+
+.principal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 7%;
+  text-align: left;
+}
+
+.portada-texto {
+  flex: 1;
+  max-width: 500px;
+}
+
+.etiqueta {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #75472f;
+}
+
+.foto-portada {
+  display: block;
+  width: 45%;
+  max-width: 440px;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+@media (max-width: 600px) {
+  .principal {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+    gap: 25px;
+  }
+
+  .foto-portada {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+
+.foto-producto {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.producto h3 {
+  color: #4c3023;
+}
+
+.precio {
+  font-size: 20px;
+  font-weight: bold;
+  color: #75472f;
+}
+
+</style>
+
+<body>
+
+  <header>
+    <h2>Barrio Café ☕</h2>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Menú</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    
+<div class="principal" id="inicio">
+  <div class="portada-texto">
+    <p class="etiqueta">CAFÉ DE ESPECIALIDAD</p>
+
+    <h1>Tu pausa favorita del día</h1>
+
+    <p>
+      Café rico, productos artesanales y un lugar
+      para disfrutar de los pequeños momentos.
+    </p>
+
+    <a class="boton" href="#productos">
+      Descubrí nuestro menú
+    </a>
+  </div>
+
+  <img
+    class="foto-portada"
+    src="imagenes/cafe.jpg"
+    alt="Taza de café servida en una cafetería"
+  >
+</div>
+
+
+    <section>
+      <h2>Bienvenido a Barrio Café</h2>
+      <p>
+        Somos un café de barrio donde podés disfrutar
+        de un buen desayuno, compartir una merienda
+        y pasar un momento agradable.
+      </p>
+    </section>
+
+    <section id="productos">
+      <h2>Nuestros favoritos</h2>
+
+      <div class="productos">
+        <article class="producto">
+        <img
+          class="foto-producto"
+          src="imagenes/cafe.jpg"
+          alt="Café con leche"
+        >
+          <h3>☕ Café con leche</h3>
+          <p class="precio">$2.500</p>
+          <p>El clásico ideal para empezar el día.</p>
+        </article>
+
+        <article class="producto">
+        <img
+          class="foto-producto"
+          src="imagenes/medialuna.jpg"
+          alt="Medialunas"
+        >
+          <h3>🥐 Medialunas</h3>
+          <p class="precio">$1.800</p>
+          <p>Una opción rica para acompañar tu café.</p>
+        </article>
+
+        <article class="producto">
+        <img
+          class="foto-producto"
+          src="imagenes/torta.jpg"
+          alt="Torta"
+        >
+          <h3>🍰 Algo dulce</h3>
+          <p class="precio">$2.200</p>
+          <p>Un pequeño gusto para la merienda.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Vení a visitarnos</h2>
+      <p>
+      Dirección:
+  <a href="https://maps.app.goo.gl/8ygP1c7qZhmTEEVj8"
+     target="_blank"
+     rel="noopener noreferrer">
+    Pergamino 499, CABA, Buenos Aires
+  </a>
+      </p>
+      <p>Horarios: 7:00 a 21:00 Lunes a Viernes.</p>
+
+      <a class="boton"
+         href="https://wa.me/5491127825817">
+        Consultar por WhatsApp
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Barrio Café · Sitio de demostración</p>
+  </footer>
+
+</body>
+</html>
